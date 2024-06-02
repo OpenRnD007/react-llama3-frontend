@@ -5,7 +5,7 @@ export const uploadKnowledgeBank = async (title: string, file: any) => {
     const formData = new FormData()
     formData.append("file", file.files[0])
     formData.append("collection_name", title)
-    formData.append("filetype", "pdf")
+    formData.append("filetype", "json")
     return await axios.post(VITE_API_URL + '/api/fileupload', formData, {
         headers: {
             'Content-Type': 'multipart/form-data'
